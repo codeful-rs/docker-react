@@ -1,6 +1,9 @@
 sudo: required
 services:
   - docker
+env:
+  - CI=true
+  - REACT_APP_CI=true
 
 before_install:
   - docker build -t milanunion/docker-react -f Dockerfile.dev .
